@@ -4,7 +4,12 @@
   "description": "Sandboxed WebRTC camera widget for PiPhi Network dashboards.",
   "license": "Apache-2.0",
   "type": "module",
-  "files": ["dist", "previews", "README.md", "widget.manifest.json"],
+  "files": [
+    "dist",
+    "previews",
+    "README.md",
+    "widget.manifest.json"
+  ],
   "scripts": {
     "build": "esbuild src/widget.js --bundle --format=esm --platform=browser --target=es2022 --outfile=dist/widget.js",
     "check": "node scripts/check-version.mjs",
@@ -15,7 +20,7 @@
     "pack": "npm run build && piphi-widget pack"
   },
   "dependencies": {
-    "piphi-network-widget-sdk": "^0.4.0"
+    "piphi-network-widget-sdk": "0.6.1"
   },
   "devDependencies": {
     "esbuild": "^0.25.9"
